@@ -1,8 +1,8 @@
 FROM ubuntu:16.04
-MAINTAINER sawanoboriyu@higanworks.com
+LABEL MAINTAINER=sawanoboriyu@higanworks.com
 
 RUN apt-get -y update && \
-    apt-get -y install curl iproute2
+    apt-get -y install curl iproute2 ca-certificates
 
 ## Prepare for Chef
 RUN mkdir /root/chefrepo
